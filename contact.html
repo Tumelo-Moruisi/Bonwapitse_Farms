@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Bonwapitse Farm – Get in touch with us for livestock enquiries, breeding bulls and horse sales in Botswana." />
+  <title>Bonwapitse Farm | Contact Us</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <nav class="navbar navbar-expand-lg" id="main-nav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Bonwapitse Farm Logo" width="60" height="60" class="nav-logo" />
+          Bonwapitse Farm
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="bulls.html">Breeding Bulls</a></li>
+            <li class="nav-item"><a class="nav-link" href="livestock.html">Livestock</a></li>
+            <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner" id="contact-banner">
+      <div class="banner-overlay">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <p>We would love to hear from you</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- CONTACT DETAILS -->
+          <div class="col-lg-5">
+            <h2 class="section-title">Get In Touch</h2>
+            <p>For all livestock enquiries, breeding bull availability and horse sales, please contact us using the details below or fill in the enquiry form.</p>
+
+            <!-- TEAM CONTACTS -->
+            <div class="team-contacts">
+
+              <div class="team-member-contact">
+                <img src="images/team-member-1.jpg" alt="Team member 1 contact at Bonwapitse Farm" width="80" height="80" class="team-thumb" />
+                <div class="team-member-info">
+                  <h4>Team Member Name</h4>
+                  <p>Role / Department</p>
+                  <p>+267 XXX XXXX</p>
+                </div>
+              </div>
+
+              <div class="team-member-contact">
+                <img src="images/team-member-2.jpg" alt="Team member 2 contact at Bonwapitse Farm" width="80" height="80" class="team-thumb" />
+                <div class="team-member-info">
+                  <h4>Team Member Name</h4>
+                  <p>Role / Department</p>
+                  <p>+267 XXX XXXX</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- FARM PHOTO -->
+            <img src="images/farm-landscape.jpg" alt="Bonwapitse Farm in the Kgalagadi District Botswana" width="480" height="280" class="img-fluid rounded-farm mt-4" />
+
+            <!-- CONTACT INFO BOX -->
+            <div class="contact-info-box mt-4">
+              <p><strong>📍 Location:</strong> Kgalagadi District, Botswana</p>
+              <p><strong>📧 Email:</strong> info@bonwapitsefarm.co.bw</p>
+              <p><strong>📞 Phone:</strong> +267 XXX XXXX</p>
+            </div>
+
+          </div>
+
+          <!-- CONTACT FORM -->
+          <div class="col-lg-7">
+            <div class="contact-form-box">
+              <h2 class="section-title">Send Us An Enquiry</h2>
+
+              <div id="form-success" class="alert alert-success d-none" role="alert">
+                Thank you! Your enquiry has been sent successfully. We will get back to you shortly.
+              </div>
+
+              <div id="form-error" class="alert alert-danger d-none" role="alert">
+                Please fill in all required fields before submitting.
+              </div>
+
+              <div id="enquiry-form" novalidate>
+
+                <div class="mb-3">
+                  <label for="full-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                  <input type="text" class="form-control" id="full-name" name="full-name" placeholder="Enter your full name" required minlength="2" />
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address <span class="required-star">*</span></label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required />
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number <span class="required-star">*</span></label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="e.g. +267 71 234 567" required pattern="[+]?[0-9\s]{7,15}" />
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="enquiry-type" class="form-label">Enquiry Type <span class="required-star">*</span></label>
+                  <select class="form-select" id="enquiry-type" name="enquiry-type" required>
+                    <option value="" disabled selected>Select an enquiry type</option>
+                    <option value="cattle">Beef Cattle</option>
+                    <option value="bulls">Breeding Bulls</option>
+                    <option value="horses">Horses</option>
+                    <option value="goats">Goats</option>
+                    <option value="sheep">Sheep</option>
+                    <option value="general">General Enquiry</option>
+                  </select>
+                  <div class="invalid-feedback">Please select an enquiry type.</div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="organisation" class="form-label">Organisation / Company</label>
+                  <input type="text" class="form-control" id="organisation" name="organisation" placeholder="Enter your organisation name (if applicable)" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message <span class="required-star">*</span></label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Describe what you are looking for..." required minlength="10"></textarea>
+                  <div class="invalid-feedback">Please enter a message of at least 10 characters.</div>
+                </div>
+
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required />
+                  <label class="form-check-label" for="privacy">I agree to be contacted by Bonwapitse Farm regarding my enquiry. <span class="required-star">*</span></label>
+                  <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+
+                <button type="button" class="btn btn-farm btn-lg w-100" id="submit-btn" onclick="submitForm()">Send Enquiry</button>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>Bonwapitse Farm</h4>
+          <p>Kgalagadi District, Botswana</p>
+          <p>Est. 2002</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="bulls.html">Breeding Bulls</a></li>
+            <li><a href="livestock.html">Livestock</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Contact Us</h4>
+          <p>Email: info@bonwapitsefarm.co.bw</p>
+          <p>Phone: +267 XXX XXXX</p>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <p class="text-center footer-copy">&copy; 2026 Bonwapitse Farm. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
