@@ -1,0 +1,608 @@
+/* ============================================
+   BONWAPITSE FARM - EXTERNAL STYLESHEET
+   styles.css
+   Author: [Your Name]
+   Description: Main stylesheet for Bonwapitse Farm website
+   ============================================ */
+
+/* ---- CSS VARIABLES (COLOUR PALETTE) ---- */
+:root {
+  --primary:     #6B3F1F;   /* Deep earth brown */
+  --secondary:   #D4711A;   /* Sunset orange */
+  --accent:      #F5A623;   /* Golden yellow */
+  --sand:        #F5E6C8;   /* Sandy beige */
+  --dark:        #1C1C1C;   /* Near black */
+  --light:       #FDF6EC;   /* Warm off-white */
+  --text-muted:  #666666;
+  --white:       #FFFFFF;
+  --font-heading: 'Georgia', serif;
+  --font-body:   'Trebuchet MS', sans-serif;
+}
+
+/* ---- GLOBAL RESET & BASE ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
+
+/* ---- NAVIGATION ---- */
+#main-nav {
+  background-color: var(--primary);
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  color: var(--white) !important;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-logo {
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  object-fit: cover;
+}
+
+.nav-link {
+  color: var(--sand) !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--accent);
+}
+
+/* Navbar shrinks when user scrolls down */
+.navbar-scrolled {
+  padding: 0.3rem 0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+  transition: all 0.3s ease;
+}
+
+/* ---- HERO SECTION ---- */
+#hero {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(28,28,28,0.5), rgba(107,63,31,0.7));
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  margin-bottom: 1rem;
+}
+
+.hero-tagline {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* ---- PAGE BANNER ---- */
+.page-banner {
+  background-size: cover;
+  background-position: center;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+}
+
+#bulls-banner    { background-image: url('images/bulls.jpg'); }
+#story-banner    { background-image: url('images/farm-landscape.jpg'); }
+#livestock-banner { background-image: url('images/cattle.jpg'); }
+#contact-banner  { background-image: url('images/team.jpg'); }
+
+.banner-overlay {
+  background: linear-gradient(to bottom, rgba(28,28,28,0.4), rgba(107,63,31,0.75));
+  width: 100%;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  padding: 2rem 0;
+}
+
+.banner-overlay h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.banner-overlay p {
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ---- BUTTONS ---- */
+.btn-hero {
+  background-color: var(--secondary);
+  color: var(--white);
+  border: none;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-hero:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-farm {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-farm:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+.btn-outline-farm {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline-farm:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* ---- SECTION STYLES ---- */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+}
+
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title.light {
+  color: var(--white);
+}
+
+.section-intro {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--text-muted);
+}
+
+.light { color: var(--white); }
+
+/* ---- BACKGROUNDS ---- */
+.bg-earth {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.bg-sand {
+  background-color: var(--sand);
+}
+
+/* ---- MISSION ---- */
+.mission-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--sand);
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+/* ---- OFFERING CARDS (HOME) ---- */
+.offering-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--white);
+  height: 100%;
+}
+
+.offering-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.offering-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.offering-body {
+  padding: 1.2rem;
+}
+
+.offering-body h3 {
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---- SPECIMEN CARDS (BULLS PAGE) ---- */
+.specimen-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: var(--white);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.specimen-card:hover {
+  transform: translateY(-5px);
+}
+
+.specimen-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.specimen-body {
+  padding: 1.2rem;
+}
+
+.specimen-body h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.bull-tag {
+  display: inline-block;
+  background-color: var(--grass, #4A7C3F);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bull-tag.available-soon {
+  background-color: var(--secondary);
+}
+
+.bull-details {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+  border-top: 1px solid var(--sand);
+  border-bottom: 1px solid var(--sand);
+  padding: 0.5rem 0;
+}
+
+.bull-details li {
+  padding: 0.2rem 0;
+  color: var(--dark);
+}
+
+.bull-details li strong {
+  color: var(--primary);
+}
+
+.bull-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0.7rem 0;
+  line-height: 1.6;
+}
+
+/* ---- LIVESTOCK CARDS ---- */
+.livestock-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: var(--white);
+}
+
+.livestock-body {
+  padding: 1.5rem;
+}
+
+.livestock-body h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+/* ---- IMAGES ---- */
+.rounded-farm {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---- EARTH DIVIDER ---- */
+.earth-divider {
+  height: 5px;
+  background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+}
+
+/* ---- STORY PAGE ---- */
+.founder-img {
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  width: 100%;
+  object-fit: cover;
+}
+
+.founder-name {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.farm-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  background: var(--sand);
+  border-left: 4px solid var(--secondary);
+  padding: 1rem;
+  border-radius: 0 6px 6px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary);
+  font-family: var(--font-heading);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ---- CONTACT PAGE ---- */
+.team-contacts {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.team-member-contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--sand);
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+.team-thumb {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+  flex-shrink: 0;
+}
+
+.team-member-info h4 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.team-member-info p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+.contact-info-box {
+  background: var(--sand);
+  border-left: 4px solid var(--secondary);
+  padding: 1rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.contact-info-box p {
+  margin-bottom: 0.4rem;
+  color: var(--dark);
+}
+
+.contact-form-box {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.required-star {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.2rem rgba(212, 113, 26, 0.25);
+}
+
+/* ---- FOOTER ---- */
+#main-footer {
+  background-color: var(--dark);
+  color: var(--sand);
+  padding: 3rem 0 1.5rem;
+}
+
+#main-footer h4 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#main-footer p {
+  font-size: 0.9rem;
+  color: #AAA;
+  margin-bottom: 0.4rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  color: #AAA;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-divider {
+  border-color: #333;
+  margin: 1.5rem 0 1rem;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .mission-text {
+    font-size: 1.1rem;
+  }
+
+  .farm-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-box {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
